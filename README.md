@@ -5,7 +5,7 @@ Simple api to manipulate helicopter records.
 ## Api
 
 ### JSON Schema
-```JSON
+```
 {
     "name:" "someName", // Required
     "reserved:" true    // Not required, defaults to false
