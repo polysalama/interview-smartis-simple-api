@@ -1,0 +1,6 @@
+{
+    "app_port": 8080,
+
+    "mongodb_host": "mongodb",
+    "mongodb_port": 27017
+}

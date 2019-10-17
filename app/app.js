@@ -1,12 +1,12 @@
 'use strict'
-
+const config_json = require('./config/config.json')
 const express = require('express');
 const routes = require('./routes/helicopterRoutes')
 const bodyParser = require('body-parser')
 const app = express()
-require('./config/mongoose')()
+require('./config/mongoose')(config_json)
 
-const port = 8080
+const port = config_json['app_port']
 
 app.use('/', async (req, res, next) => {
     bodyParser.json()(req, res, err => {
