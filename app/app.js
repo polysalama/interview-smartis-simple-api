@@ -8,10 +8,10 @@ require('./config/mongoose')(config_json)
 
 const port = config_json['app_port']
 
-app.use('/', async (req, res, next) => {
+app.use('/', (req, res, next) => {
     bodyParser.json()(req, res, err => {
         if (err) {
-            res.status(400).send({ message: 'Bad JSON format.' })
+            return res.status(400).send({ message: 'Bad JSON format.' })
         }
         next();
     })
